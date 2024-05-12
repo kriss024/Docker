@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  datascience-notebook:
+    container_name: jupyter_container
+    restart: no
+    image: jupyter/datascience-notebook
+    environment:
+      - DOCKER_STACKS_JUPYTER_CMD=notebook
+    volumes:
+      - ".:/home/jovyan/work"
+    ports:
+      - "8888:8888"
