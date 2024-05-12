@@ -1,0 +1,19 @@
+version: '3.8'  # Specify Docker Compose version
+
+services:
+  rockylinux:
+    image: rockylinux:9  # Use the official Rocky Linux image
+    container_name: rockylinux  # Assign a name to the container
+    tty: true  # Allocate a pseudo-TTY to the container
+    stdin_open: true  # Keep STDIN open even if not attached
+    privileged: true # (Optional, but often needed for system-level access inside the container)
+    command: /bin/bash  # Start the container with a Bash shell
+
+    # Optional: If you want to map volumes or ports, add those here
+    #volumes:
+    #  - ./my_local_data:/data_inside_container
+    #ports:
+    #  - 8080:80
+
+# Start a container with the command: docker-compose up -d
+# In the same terminal, enter the command: docker attach rockylinux
