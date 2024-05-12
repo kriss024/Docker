@@ -1,9 +1,9 @@
-version: '3'
+version: '3.8'
 
 services:
-  ubuntu_container:
-    image: ubuntu:latest
-    restart: no
-    tty: true
-    stdin_open: true
-    command: /bin/bash
+  ubuntu_container:            # Name of your service
+    image: ubuntu:latest       # Use the latest official Ubuntu image
+    container_name: ubuntu     # Name your container (optional)
+    tty: true                  # Allocate a pseudo-TTY for interactive use
+    stdin_open: true           # Keep STDIN open even if not attached (optional)
+    command: /bin/bash         # Start the container with Bash 
