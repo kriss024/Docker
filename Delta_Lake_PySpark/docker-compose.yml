@@ -1,9 +1,15 @@
-version: "3.8"
+version: '3.8'
 
 services:
   delta-lake-notebook:
-    container_name: delta-lake_container
-    image: deltaio/delta-docker
-    restart: no
+    image: deltaio/delta-docker  # Assuming you built the image as per the repo's instructions
+    container_name: delta-lake
     ports:
-      - "8888-8889:8888-8889"
+      - 8888:8888       # Map JupyterLab port
+      - 8889:8889       # Map JupyterLab port (if needed)
+    volumes:
+      - .:/opt/spark/work-dir/data # Mount a local directory for your notebooks
+    command: 
+      - bash -c "mkdir -p /opt/spark/work-dir/data"
+
+
