@@ -2,9 +2,9 @@ version: '3.8'
 
 services:
   datascience-notebook:
-    container_name: jupyter_container
-    restart: no
     image: jupyter/datascience-notebook
+    container_name: jupyter_python
+    restart: no
     environment:
       - DOCKER_STACKS_JUPYTER_CMD=notebook
     volumes:
