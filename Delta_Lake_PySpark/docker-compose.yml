@@ -1,9 +1,9 @@
 version: '3.8'
 
 services:
-  delta-lake-notebook:
+  delta-lake:
     image: deltaio/delta-docker  # Assuming you built the image as per the repo's instructions
-    container_name: delta-lake
+    container_name: delta-spark
     restart: no
     ports:
       - 8888:8888       # Map JupyterLab port
