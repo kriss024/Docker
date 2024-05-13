@@ -8,7 +8,7 @@ services:
     environment:
       - DISABLE_AUTH=true
     volumes:
-      - ./:/home/rstudio            # Mount your current directory into the container
+      - .:/home/rstudio            # Mount your current directory into the container
     working_dir: /home/rstudio      # Set the working directory inside the container
     ports:
       - 8787:8787                   # Expose the RStudio Server port (if you want to use it)
