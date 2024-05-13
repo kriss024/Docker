@@ -3,7 +3,7 @@ version: '3.8'  # Specify Docker Compose version
 services:
   rockylinux:
     image: rockylinux:9  # Use the official Rocky Linux image
-    container_name: rockylinux  # Assign a name to the container
+    container_name: rockylinux9  # Assign a name to the container
     restart: no
     tty: true  # Allocate a pseudo-TTY to the container
     stdin_open: true  # Keep STDIN open even if not attached
