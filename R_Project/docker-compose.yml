@@ -4,6 +4,7 @@ services:
   r-environment:
     image: rocker/tidyverse:latest  # Use the Rocker Tidyverse image (includes R and many popular packages)
     container_name: rstudio-container     # Name your container
+    restart: no
     environment:
       - DISABLE_AUTH=true
     volumes:
