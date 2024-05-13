@@ -1,8 +1,8 @@
-version: "3.8"
+version: '3.8'
 
 services:
   anaconda:
-    container_name: anaconda3_container
+    container_name: anaconda_python
     restart: no
     image: continuumio/anaconda3
     volumes:
