@@ -2,8 +2,8 @@ version: '3.8'
 
 services:
   pyspark-notebook:
-    container_name: pyspark_container
     image: jupyter/pyspark-notebook
+    container_name: jupyter_pyspark
     restart: no
     environment:
       - DOCKER_STACKS_JUPYTER_CMD=notebook
