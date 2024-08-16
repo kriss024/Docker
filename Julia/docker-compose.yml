@@ -5,6 +5,8 @@ services:
     image: jupyter/julia-notebook
     container_name: julia_notebook
     restart: no
+    environment:
+      - DOCKER_STACKS_JUPYTER_CMD=notebook
     volumes:
       - .:/home/jovyan/work
     ports:
