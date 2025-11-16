@@ -3,10 +3,11 @@ version: '3.8'
 services:
   anaconda:
     container_name: anaconda_python
-    restart: no
     image: continuumio/anaconda3
+    working_dir: /opt/notebooks
     volumes:
       - .:/opt/notebooks
     ports:
       - 8888:8888
     command: bash -c "mkdir -p /opt/notebooks && jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --allow-root"
+
