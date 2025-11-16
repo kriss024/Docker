@@ -34,7 +34,8 @@ rmi - Remove one or more images
 run - Run a command in a new container
 cp - Copy files/folders between a container and the local filesystem
 commit - Creates a new image from a container's changes.
-ps - Lists containers.
+ps - List running containers.
+ps -a - List all containers.
 images - Lists images.
 exec - Runs a command in a running container.
 search - Search the Docker Hub for images.
