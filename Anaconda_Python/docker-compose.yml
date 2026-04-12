@@ -5,6 +5,8 @@ services:
     container_name: anaconda_python
     image: continuumio/anaconda3
     working_dir: /opt/notebooks
+    environment:
+      PYDEVD_DISABLE_FILE_VALIDATION: 1
     volumes:
       - .:/opt/notebooks
     ports:
